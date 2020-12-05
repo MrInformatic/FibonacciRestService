@@ -1,14 +1,16 @@
-name: Build Lint Test
+name: Build Test
 
 on:
   pull_request:
-  push: master
+  push: 
+    branches:
+      - master
 
 env:
   IMAGE_NAME: ${{ github.event.repository.name }}:${{ github.sha }}
 
 jobs:
-  build_lint_test:
+  build_test:
     runs-on: ubuntu-latest
 
     steps:
