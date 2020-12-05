@@ -2,7 +2,7 @@ name: Build Lint Test
 
 on:
   pull_request:
-  push:
+  push: master
 
 env:
   IMAGE_NAME: ${{ github.event.repository.name }}:${{ github.sha }}
