@@ -63,5 +63,18 @@ namespace FibonacciRestService.Tests.Controllers
 
             Assert.Equal(expectedResult, result);
         }
+
+        [Theory]
+        [InlineData("test")]
+        [InlineData("test2")]
+        [InlineData("3test")]
+        public async void FibonacciTextIntegartionTest(string text)
+        {
+            var client = factory.CreateClient();
+
+            var response = await client.GetAsync(String.Format(URL_TEMPLATE, text));
+
+            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        }
     }
 }
