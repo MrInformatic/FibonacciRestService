@@ -46,7 +46,11 @@ namespace FibonacciRestService.Tests.Controllers
         [InlineData(9L, 34L)]
         [InlineData(10L, 55L)]
         [InlineData(11L, 89L)]
-        [InlineData(12L, 144L)]
+        [InlineData(12L, 100L)]
+        [InlineData(13L, 100L)]
+        [InlineData(14L, 100L)]
+        [InlineData(100L, 100L)]
+        [InlineData(1000L, 100L)]
         public async void FibonacciPositiveIntegartionTest(long index, long expectedResult)
         {
             var client = factory.CreateClient();
