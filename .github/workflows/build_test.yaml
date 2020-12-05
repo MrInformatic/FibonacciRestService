@@ -1,0 +1,32 @@
+name: Build Lint Test
+
+on:
+  pull_request:
+  push:
+
+env:
+  IMAGE_NAME: ${{ github.event.repository.name }}:${{ github.sha }}
+
+jobs:
+  build_lint_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code base
+        uses: actions/checkout@v2
+      
+      - name: Setup .Net Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+      
+      - name: Tests
+        run: dotnet test
+      
+      - name: Transform Docker image name to lower case
+        id: lowercase
+        run: echo "::set-output name=image_name::$(echo $IMAGE_NAME | tr '[A-Z]' '[a-z]')"
+
+      - name: Build Docker image
+        run: DOCKER_BUILDKIT=1 docker build -t ${{ steps.lowercase.outputs.image_name }} .
+
