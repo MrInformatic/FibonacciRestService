@@ -21,12 +21,12 @@ jobs:
           dotnet-version: '3.1.x'
       
       - name: Tests
-        run: dotnet test
+        run: cd Tests/ && dotnet test
       
       - name: Transform Docker image name to lower case
         id: lowercase
         run: echo "::set-output name=image_name::$(echo $IMAGE_NAME | tr '[A-Z]' '[a-z]')"
 
       - name: Build Docker image
-        run: DOCKER_BUILDKIT=1 docker build -t ${{ steps.lowercase.outputs.image_name }} .
+        run: cd Service/ && DOCKER_BUILDKIT=1 docker build -t ${{ steps.lowercase.outputs.image_name }} .
 
