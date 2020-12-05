@@ -2,15 +2,19 @@ using System;
 
 namespace FibonacciRestService.Service.Model
 {
-    public class Fibonacci
+    public class FibonacciModel
     {
-        public static long fibonacci(long index)
+        public static long Fibonacci(long index)
         {
-            if (index == 0)
+            if (index < 0)
+            {
+                throw new ArgumentException("index sould be greater than zero");
+            }
+            else if (index == 0)
             {
                 return 0;
             }
-            else if (index > 0)
+            else
             {
                 long previous = 0;
                 long current = 1;
@@ -24,10 +28,7 @@ namespace FibonacciRestService.Service.Model
 
                 return current;
             }
-            else
-            {
-                throw new ArgumentException("index sould be greater than zero");
-            }
+
         }
     }
 }
