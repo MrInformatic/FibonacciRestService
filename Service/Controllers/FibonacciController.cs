@@ -14,7 +14,14 @@ namespace FibonacciRestService.Service.Controllers
         {
             try
             {
-                return new JsonResult(FibonacciModel.Fibonacci(index));
+                if (index < 12)
+                {
+                    return new JsonResult(FibonacciModel.Fibonacci(index));
+                }
+                else
+                {
+                    return new JsonResult(100);
+                }
             }
             catch (ArgumentException)
             {
