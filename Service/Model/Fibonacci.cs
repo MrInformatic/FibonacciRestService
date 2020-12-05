@@ -1,6 +1,6 @@
 using System;
 
-namespace FibonacciRestService.Model
+namespace FibonacciRestService.Service.Model
 {
     public class Fibonacci
     {
