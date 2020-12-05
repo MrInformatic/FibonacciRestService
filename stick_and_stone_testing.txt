@@ -1,0 +1,225 @@
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/-100'
+
+# Response:
+# status code: 400
+# body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"Bad Request","status":400,"traceId":"|f6c53043-41c0121f52370f49."}
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/-10'
+
+# Response:
+# status code: 400
+# body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"Bad Request","status":400,"traceId":"|f6c53044-41c0121f52370f49."}
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/-3'
+
+# Response:
+# status code: 400
+# body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"Bad Request","status":400,"traceId":"|f6c53045-41c0121f52370f49."}
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/-2'
+
+# Response:
+# status code: 400
+# body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"Bad Request","status":400,"traceId":"|f6c53046-41c0121f52370f49."}
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/-1'
+
+# Response:
+# status code: 400
+# body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"Bad Request","status":400,"traceId":"|f6c53047-41c0121f52370f49."}
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/0'
+
+# Response:
+# status code: 200
+# body: 0
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/1'
+
+# Response:
+# status code: 200
+# body: 1
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/2'
+
+# Response:
+# status code: 200
+# body: 1
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/3'
+
+# Response:
+# status code: 200
+# body: 2
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/4'
+
+# Response:
+# status code: 200
+# body: 3
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/5'
+
+# Response:
+# status code: 200
+# body: 5
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/6'
+
+# Response:
+# status code: 200
+# body: 8
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/7'
+
+# Response:
+# status code: 200
+# body: 13
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/8'
+
+# Response:
+# status code: 200
+# body: 21
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/9'
+
+# Response:
+# status code: 200
+# body: 34
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/10'
+
+# Response:
+# status code: 200
+# body: 55
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/11'
+
+# Response:
+# status code: 200
+# body: 89
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/12'
+
+# Response:
+# status code: 200
+# body: 144
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/13'
+
+# Response:
+# status code: 200
+# body: 233
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/14'
+
+# Response:
+# status code: 200
+# body: 377
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/100'
+
+# Response:
+# status code: 200
+# body: 3736710778780434371
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/1000'
+
+# Response:
+# status code: 200
+# body: 817770325994397771
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/test'
+
+# Response:
+# status code: 400
+# body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|f6c53059-41c0121f52370f49.","errors":{"index":["The value 'test' is not valid."]}}
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/test2'
+
+# Response:
+# status code: 400
+# body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|f6c5305a-41c0121f52370f49.","errors":{"index":["The value 'test2' is not valid."]}}
+
+# -------------------------------------------------
+
+# Request:
+curl -XGET 'http://localhost:8080/helloapi/fibonacci/3test'
+
+# Response:
+# status code: 400
+# body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|f6c5305b-41c0121f52370f49.","errors":{"index":["The value '3test' is not valid."]}}
+
+# -------------------------------------------------
+
