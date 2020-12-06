@@ -1,6 +1,6 @@
 # Fibonacci Rest Service
 
-This Microservice offers the ability to calculate the [Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number) within the sending of a HTTP Request.
+This Microservice offers the ability to calculate the [Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number) within the sending of an HTTP Request.
 
 ## Summary
 
@@ -53,7 +53,7 @@ The test could be run by running the following command in the Tests directory:
 
 ### Stick and Stone Testing
 
-There is also Python Script which is able to automate the process of generating a text file which contains sample request with curl and the response from the server. It could be run like this:
+There is also Python Script which can automate the process of generating a text file that contains sample requests with curl and the response from the server. It could be run like this:
 
     python stick_and_stone_testing.py -o $OUTPUT_FILE -h $HOST
 
@@ -63,7 +63,7 @@ The `$HOST` is the hostname and port of the machine running the service. For Exa
 
 ## Deployment
 
-You could use the Dockerfile in the Service directory to build an image which could be deployed in a varaity of environments.
+You could use the Dockerfile in the Service directory to build an image which could be deployed in a variety of environments.
 
 ## Built With
 
