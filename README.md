@@ -1,6 +1,6 @@
 # Fibonacci Rest Service
 
-This Microservice offers the ability to calculate the [Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number) within the sending of an HTTP Request.
+This Microservice offers the ability to calculate the [Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number) within the sending of an HTTP Request. Fibonacci numbers are clipped at 100.
 
 ## Summary
 
@@ -44,6 +44,12 @@ You are also able build a docker image by running:
 you could then run the image by running:
 
     docker run -p 8080:80 -it $IMAGE_NAME .
+
+Here are some example requests using curl:
+
+    curl -XGET http://localhost:8080/helloapi/fibonacci/0
+    curl -XGET http://localhost:8080/helloapi/fibonacci/5
+    curl -XGET http://localhost:8080/helloapi/fibonacci/12
 
 ## Running the tests
 
